@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シフト管理アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./JS/calender.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- サイドメニュー -->
+      <aside class="sidebar">
+        <ul>
+          <li><a href="index.html">カレンダー</a></li>
+          <li><a href="./html/kanri.html">従業員管理</a></li>
+          <li><a href="./html/explain.html">使い方</a></li>
+          <li><a href="./html/setting.html">設定</a></li>
+        </ul>
+      </aside>
+
+      <!-- メイン -->
+      <main class="main">
+        <header class="header">
+          <h1>シフト表</h1>
+        </header>
+
+        <section class="calendar">
+          <div class="calendar-header">
+            <button id="prevMonth">◀</button>
+            <h2 id="calendarTitle"></h2>
+            <button id="nextMonth">▶</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody">
+              <!-- JavaScriptで日付セルを生成 -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <!--container-->
+  </body>
+</html>

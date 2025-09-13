@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>従業員管理</title>
+    <link rel="stylesheet" href="../CSS/kanri.css" />
+    <script src="../JS/kanri.js" defer></script>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <li><a href="../index.html">カレンダー</a></li>
+      <li><a href="kanri.html">従業員管理</a></li>
+      <li><a href="explain.html">使い方</a></li>
+      <li><a href="setting.html">設定</a></li>
+    </div>
+
+    <div class="main">
+      <h1>従業員管理</h1>
+
+      <!-- 従業員追加フォーム -->
+      <form id="employeeForm">
+        <input type="text" id="name" placeholder="名前" required />
+        <input type="text" id="position" placeholder="役職" required />
+        <button type="submit">追加</button>
+      </form>
+
+      <!-- 従業員一覧 -->
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>名前</th>
+            <th>役職</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JSで追加 -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* サイドバー */
+.sidebar {
+  width: 230px;
+  background: #eaeaea;
+  color: #fff;
+  height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  position: fixed;
+}
+.sidebar li {
+  list-style: none;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background: #b3b6b9;
+}
+
+/* メインエリア */
+.main {
+  margin-left: 220px;
+  padding: 30px;
+  flex: 1;
+}
+
+.main h1 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
