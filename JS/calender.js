@@ -1,8 +1,12 @@
+// app.js
 
 // ===== グローバル変数 =====
 let today = new Date();
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
+
+// 従業員リスト（あとで従業員管理ページと連携予定）
+const employees = ["山田", "佐藤", "鈴木"];
 
 // ===== カレンダー生成 =====
 function generateCalendar(year, month) {
@@ -42,12 +46,24 @@ function setupCalendarCell(cell, year, month, date) {
 
 // ===== シフト追加 =====
 function addShift(cell, year, month, date) {
-  let shift = prompt(`${year}/${month + 1}/${date} のシフトを入力してください:`);
-  if (shift) {
-    let shiftDiv = document.createElement("div");
-    shiftDiv.classList.add("shift");
-    shiftDiv.textContent = shift;
-    cell.appendChild(shiftDiv);
+  // 従業員を選ぶ
+  let employee = prompt(
+    `${year}/${month + 1}/${date} の担当者を選んでください:\n${employees.map((e, i) => i + 1 + ". " + e).join("\n")}`
+  );
+  let empIndex = parseInt(employee) - 1;
+
+  if (empIndex >= 0 && empIndex < employees.length) {
+    let empName = employees[empIndex];
+    let shift = prompt(`${empName} さんのシフト内容を入力してください:`);
+
+    if (shift) {
+      let shiftDiv = document.createElement("div");
+      shiftDiv.classList.add("shift");
+      shiftDiv.textContent = `${empName}: ${shift}`;
+      cell.appendChild(shiftDiv);
+    }
+  } else {
+    alert("正しい番号を入力してください。");
   }
 }
 
